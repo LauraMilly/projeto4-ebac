@@ -1,5 +1,15 @@
-$bgcolor: red;
+$bgcolor: #000;
+
+@font-face {
+  font-family: "Jonathan Ball";
+  src: url("../../assets/fonts/jonathan-ball-acre-medium.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   background-color: $bgcolor;
+  color: aliceblue;
+  font-family: "Jonathan Ball", sans-serif;
 }
