@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Batman</title>
-    <link rel="stylesheet" href="dist/css/main.css" />
-  </head>
-  <body>
-    <h1>Olá</h1>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filmbox - The Batman</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">filmbox</div>
+    <nav>
+      <ul>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">TV Shows</a></li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <img src="dist/images/batman-png.png" alt="Perfil" />
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#"><i class="icon-home"></i></a></li>
+      <li><a href="#"><i class="icon-search"></i></a></li>
+      <li><a href="#"><i class="icon-list"></i></a></li>
+      <!-- Outros ícones -->
+    </ul>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="movie-info">
+        <h1>The Batman</h1>
+        <div class="rating">⭐⭐⭐⭐☆ 4.8</div>
+        <p>Batman vs. Gotham City’s underworld after a serial killer leaves cryptic clues at the crime scenes.</p>
+        <button class="btn-watch">Watch Now</button>
+      </div>
+      <div class="movie-poster">
+        <img src="batman.png" alt="The Batman" />
+      </div>
+      <div class="movie-thumbs">
+        <img src="thumb1.png" alt="Trailer 1" />
+        <img src="thumb2.png" alt="Trailer 2" />
+        <img src="thumb3.png" alt="Trailer 3" />
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
 </html>

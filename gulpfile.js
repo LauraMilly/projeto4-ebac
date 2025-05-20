@@ -1,38 +1,41 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass")(require("sass"));
-const imagemin = require("gulp-imagemin");
+import gulp from 'gulp';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import postcss from 'gulp-postcss';
+import imagemin from 'gulp-imagemin';
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminOptipng from 'imagemin-optipng';
+import imageminSvgo from 'imagemin-svgo';
 
-function styles() {
+const sass = gulpSass(dartSass);
+
+export function styles() {
   return gulp
-    .src("./src/styles/*.scss")
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-    .pipe(gulp.dest("./dist/css"));
+    .src('./src/styles/main.scss')
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(postcss()) // Processa Tailwind e Autoprefixer
+    .pipe(gulp.dest('./dist/css'));
 }
 
-function images() {
+export function images() {
   return gulp
-    .src("./src/images/*")
+    .src('./src/images/**/*.{jpg,jpeg,png,svg}')
     .pipe(
       imagemin([
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [
-            { removeViewBox: false },
-            { cleanupIDs: false }
-          ]
-        })
+        imageminMozjpeg({ quality: 75, progressive: true }),
+        imageminOptipng({ optimizationLevel: 5 }),
+        imageminSvgo({
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+        }),
       ])
     )
-    .pipe(gulp.dest("./dist/images"));
+    .pipe(gulp.dest('./dist/images'))
+    .on('end', () => console.log('Imagens processadas!'));
 }
 
-function watchFiles() {
-  gulp.watch("./src/styles/*.scss", styles);
-  gulp.watch("./src/images/*", images);
+export function watchFiles() {
+  gulp.watch('./src/styles/**/*.scss', styles);
+  gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg}', images);
 }
 
-exports.styles = styles;
-exports.images = images;
-exports.watch = watchFiles;
-exports.default = gulp.parallel(styles, images, watchFiles);
+export default gulp.parallel(styles, images, watchFiles);
