@@ -1,0 +1,13 @@
+section.home {
+    background-image: 
+    linear-gradient(to left, transparent 9%, #000000af 80%),
+    linear-gradient(to left, transparent 10%, #00000062 80%),
+    linear-gradient(to right, transparent 10%, #000000af 80%),
+    linear-gradient(to right, transparent 10%, #0000003b 80%),
+    url('/dist/images/wallpaper-batman-balck.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}

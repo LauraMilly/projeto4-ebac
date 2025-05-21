@@ -2,6 +2,8 @@ import gulp from 'gulp';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
+import tailwindcss from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
 import imagemin from 'gulp-imagemin';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminOptipng from 'imagemin-optipng';
@@ -9,11 +11,20 @@ import imageminSvgo from 'imagemin-svgo';
 
 const sass = gulpSass(dartSass);
 
-export function styles() {
+export function tailwindStyles() {
+  return gulp
+    .src('./src/styles/tailwind.scss')
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(postcss([tailwindcss(), autoprefixer()]))
+    .pipe(gulp.dest('./dist/css'))
+    .on('end', () => console.log('Tailwind Styles gerados'));
+}
+
+
+export function customStyles() {
   return gulp
     .src('./src/styles/main.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(postcss()) // Processa Tailwind e Autoprefixer
     .pipe(gulp.dest('./dist/css'));
 }
 
@@ -34,8 +45,9 @@ export function images() {
 }
 
 export function watchFiles() {
-  gulp.watch('./src/styles/**/*.scss', styles);
+  gulp.watch('./src/styles/tailwind.scss', tailwindStyles);
+  gulp.watch('./src/styles/**/*.scss', customStyles);
   gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg}', images);
 }
 
-export default gulp.parallel(styles, images, watchFiles);
+export default gulp.parallel(tailwindStyles, customStyles, images, watchFiles);

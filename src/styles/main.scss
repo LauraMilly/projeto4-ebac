@@ -1,21 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use './components/home';
+@use './components/header';
+@use './components/sidebar';
 
-// seus estilos SCSS personalizados aqui
-
-$bgcolor: #000;
+$bgcolor: #ffffff;
 
 @font-face {
   font-family: "Jonathan Ball";
   src: url("../../assets/fonts/jonathan-ball-acre-medium.otf")
-    format("opentype");
+  format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .3s linear;
+}
+
 body {
   background-color: $bgcolor;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-family: "Jonathan Ball", sans-serif;
 }
