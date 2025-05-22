@@ -1,0 +1,46 @@
+$background-color: #1b1c1c;
+$icon-color: #ffffff;
+$icon-hover-color: #a00411; 
+$sidebar-width: 4rem; 
+
+.sidebar {
+  position: fixed;      
+  top: 0;               
+  left: 0;              
+  height: 100vh;      
+  background-color: $background-color;
+  width: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  gap: 2.3rem;
+  cursor: pointer;
+  z-index: 60;   
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  i {
+    color: $icon-color;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative; 
+
+    &:hover {
+      color: $icon-hover-color;
+    }
+  }
+
+  .notification {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.6rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: rgb(255, 123, 0);
+    border-radius: 50%;
+    border: 1px solid $icon-color; 
+  }
+}

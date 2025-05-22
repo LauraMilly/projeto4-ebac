@@ -1,13 +1,38 @@
+$font-color: #ffffff;
+$icon-hover-color: #a00411; 
+
+@font-face {
+  font-family: "Jonathan Ball";
+  src: url("../../assets/fonts/jonathan-ball-acre-medium.otf")
+  format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 section.home {
     background-image: 
-    linear-gradient(to left, transparent 9%, #000000af 80%),
-    linear-gradient(to left, transparent 10%, #00000062 80%),
-    linear-gradient(to right, transparent 10%, #000000af 80%),
-    linear-gradient(to right, transparent 10%, #0000003b 80%),
-    url('/dist/images/wallpaper-batman-balck.jpg');
+    linear-gradient(to right, transparent 10%, #00000048 80%),
+    linear-gradient(to right, transparent 10%, #00000027 80%),
+    url('/dist/images/wallpaper-batman-balck2_edited.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
+    color: $font-color;
+}
+
+.batman-image {
+  height: 760px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  position: static;
+  filter: drop-shadow(0 0 30px #ff051a);
+  margin-right: -200px;
+  margin-top: 150px;
+}
+
+.text{
+    margin-left: 200px;
 }

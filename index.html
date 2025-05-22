@@ -1,56 +1,58 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Filmbox - The Batman</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="dist/css/main.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="dist/css/tailwind.css"/>
+  <link rel="stylesheet" href="dist/css/main.css"/>
 </head>
 <body class="bg-black text-white min-h-screen flex">
-  <!-- sidebar -->
-  <aside class="w-16 bg-[#121212] flex flex-col items-center py-6 space-y-6">
-    <i class="fas fa-home text-xl text-white hover:text-pink-500 cursor-pointer"></i>
-    <i class="fas fa-film text-xl text-white hover:text-pink-500 cursor-pointer"></i>
-    <i class="fas fa-tv text-xl text-white hover:text-pink-500 cursor-pointer"></i>
-    <i class="fas fa-user text-xl text-white hover:text-pink-500 cursor-pointer"></i>
+  <aside class="sidebar">
+    <i class="fi fi-rr-home"></i>
+    <i class="fi fi-rr-apps"></i>
+    <i class="fi fi-rr-comment">
+      <span class="notification"></span>
+    </i>
+    <i class="fi fi-rr-heart"></i>
+    <i class="fi fi-rr-share"></i>
+    <i class="fi fi-rr-screen"></i>
+    <i class="fi fi-rr-film"></i>
+    <i class="fi fi-rr-user">
+      <span class="notification"></span>
+    </i>
   </aside>
 
 <!-- conteudo -->
 <div class="flex-1 flex flex-col">
-
 <!-- header -->
-    <header class="flex items-center justify-between px-8 py-4 border-b border-gray-800">
-      <h1 class="text-2xl font-bold text-pink-600">filmbox</h1>
-      <nav class="flex gap-6 text-gray-300 text-sm">
-        <a href="#" class="hover:text-white">Movies</a>
-        <a href="#" class="hover:text-white">Series</a>
-        <a href="#" class="hover:text-white">TV Shows</a>
-      </nav>
-      <img src="src/images/user.jpg" alt="User" class="w-10 h-10 rounded-full border-2 border-pink-600" />
-    </header>
+<header class="header">
+  <nav class="flex gap-6 text-gray-300 text-sm">
+    <a href="#" class="hover:text-white">Movies</a>
+    <a href="#" class="hover:text-white">Series</a>
+    <a href="#" class="hover:text-white">TV Shows</a>
+  </nav>
+    <h1 class="text-2xl font-bold text-pink-600">Film<span>box</span>
+  </h1>
+  <img src="src/images/user.jpg" alt="User" class="w-10 h-10 rounded-full border-2 border-pink-600" />
+</header>
 
-<!-- background hero -->
-<section class="home flex flex-row flex-1 px-8 py-12 space-x-8 items-center">
-  <!-- Texto à esquerda -->
-  <div class="flex-1 z-20 flex flex-col justify-center">
+<!--section home-->
+
+<section class="home flex flex-row flex-1 px-8 py-12 space-x-8 items-center pt-28">
+  <div class="text flex-1 z-20 flex flex-col justify-center">
     <h2 class="text-4xl font-bold mb-4">The Batman</h2>
     <p class="text-lg text-gray-400 max-w-md">
-      Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor, atque nesciunt unde ipsa quas architecto facilis dicta doloribus libero tempora mollitia vero neque laudantium aliquam fugit ad praesentium earum.
     </p>
   </div>
-
-  <!-- Imagens empilhadas à direita -->
-  <div class="flex flex-col items-center space-y-4 z-10">
-    <img src="src/images/batman-png.png" alt="Batman" class="w-80 object-contain" />
-    <img src="src/images/alguma-outra-imagem.png" alt="Decorativo" class="w-80 object-contain" />
-  </div>
+    <img src="src/images/batman-blob-svg.svg" alt="Batman" class="batman-image" />
 </section>
+
 
 
 </div>
 </body>
 
-</body>
 </html>
