@@ -8,8 +8,22 @@ import imagemin from 'gulp-imagemin';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminOptipng from 'imagemin-optipng';
 import imageminSvgo from 'imagemin-svgo';
+import uglify from 'gulp-uglify';
+import concat from 'gulp-concat';
+import sourcemaps from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
+
+export function scripts() {
+  return gulp
+    .src('./src/js/**/*.js') 
+    .pipe(sourcemaps.init())
+    .pipe(concat('main.js')) 
+    .pipe(uglify())          
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/js'))
+    .on('end', () => console.log('Scripts processados!'));
+}
 
 export function tailwindStyles() {
   return gulp
@@ -36,7 +50,16 @@ export function images() {
         imageminMozjpeg({ quality: 75, progressive: true }),
         imageminOptipng({ optimizationLevel: 5 }),
         imageminSvgo({
-          plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeViewBox: false, 
+                },
+              },
+            },
+          ],
         }),
       ])
     )
@@ -44,10 +67,13 @@ export function images() {
     .on('end', () => console.log('Imagens processadas!'));
 }
 
+
+
 export function watchFiles() {
   gulp.watch('./src/styles/tailwind.scss', tailwindStyles);
   gulp.watch('./src/styles/**/*.scss', customStyles);
   gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg}', images);
+  gulp.watch('./src/js/**/*.js', scripts);
 }
 
-export default gulp.parallel(tailwindStyles, customStyles, images, watchFiles);
+export default gulp.parallel(tailwindStyles, customStyles, images, scripts, watchFiles);

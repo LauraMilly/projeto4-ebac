@@ -8,51 +8,59 @@
   <link rel="stylesheet" href="dist/css/tailwind.css"/>
   <link rel="stylesheet" href="dist/css/main.css"/>
 </head>
-<body class="bg-black text-white min-h-screen flex">
-  <aside class="sidebar">
-    <i class="fi fi-rr-home"></i>
+<body class="bg-black text-white min-h-screen">
+  <div class="flex flex-col">
+  <header class="header w-full fixed top-0 left-0 flex items-center justify-between px-4 sm:px-8 py-4 bg-black/50 backdrop-blur z-50">
+    <nav class="flex gap-4 sm:gap-6 text-gray-300 text-xs sm:text-sm">
+      <a href="#films" class="hover:text-white">Movies</a>
+      <a href="#films" class="hover:text-white">Series</a>
+      <a href="#films" class="hover:text-white">TV Shows</a>
+    </nav>
+    <h1 class="text-xl sm:text-2xl font-bold text-pink-600">
+      Film<span class="text-white">box</span>
+    </h1>
+    <img src="src/images/user.jpg" alt="User" class="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-pink-600"/>
+  </header>
+
+<!-- section Home -->
+<section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
+<aside class="sidebar">
+  <img src="src/images/logo2-png.png" alt="Logo">
+  <div class="icons-container">
+    <a href="#home"><i class="fi fi-rr-home"></i></a>
     <i class="fi fi-rr-apps"></i>
-    <i class="fi fi-rr-comment">
-      <span class="notification"></span>
+    <i class="fi fi-rr-comment"><span class="notification"></span></i>
+    <i class="fi fi-rr-user"><span class="notification"></span>
     </i>
     <i class="fi fi-rr-heart"></i>
     <i class="fi fi-rr-share"></i>
     <i class="fi fi-rr-screen"></i>
-    <i class="fi fi-rr-film"></i>
-    <i class="fi fi-rr-user">
-      <span class="notification"></span>
-    </i>
-  </aside>
-
-<!-- conteudo -->
-<div class="flex-1 flex flex-col">
-<!-- header -->
-<header class="header">
-  <nav class="flex gap-6 text-gray-300 text-sm">
-    <a href="#" class="hover:text-white">Movies</a>
-    <a href="#" class="hover:text-white">Series</a>
-    <a href="#" class="hover:text-white">TV Shows</a>
-  </nav>
-    <h1 class="text-2xl font-bold text-pink-600">Film<span>box</span>
-  </h1>
-  <img src="src/images/user.jpg" alt="User" class="w-10 h-10 rounded-full border-2 border-pink-600" />
-</header>
-
-<!--section home-->
-
-<section class="home flex flex-row flex-1 px-8 py-12 space-x-8 items-center pt-28">
-  <div class="text flex-1 z-20 flex flex-col justify-center">
-    <h2 class="text-4xl font-bold mb-4">The Batman</h2>
-    <p class="text-lg text-gray-400 max-w-md">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor, atque nesciunt unde ipsa quas architecto facilis dicta doloribus libero tempora mollitia vero neque laudantium aliquam fugit ad praesentium earum.
-    </p>
+    <a href="#films"><i class="fi fi-rr-film"></i></a>
   </div>
-    <img src="src/images/batman-blob-svg.svg" alt="Batman" class="batman-image" />
-</section>
+</aside>
 
-
-
+<div class="text flex-1 z-20 flex flex-col justify-center">
+  <h2 class="text-4xl font-bold mb-4">The Batman</h2>
+  <p class="text-lg text-gray-400 max-w-md">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor, atque nesciunt unde ipsa quas architecto facilis dicta doloribus libero tempora mollitia vero neque laudantium aliquam fugit ad praesentium earum.
+  </p>
 </div>
+
+<!-- Imagem -->
+
+
+    </section>
+
+    <!-- Outra section -->
+    <section class="p-10">
+      <h1 class="text-2xl mb-4">Outra Section</h1>
+      <p class="text-gray-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis temporibus et, molestias, perferendis doloribus beatae, exercitationem laboriosam libero fugiat blanditiis soluta velit eaque? Consequatur aliquam nam hic. Reprehenderit, odit nostrum.
+      </p>
+    </section>
+
+  </div>
+  <script src="src/js/script.js"></script>
 </body>
 
 </html>

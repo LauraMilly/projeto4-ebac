@@ -1,46 +1,70 @@
 $background-color: #1b1c1c;
 $icon-color: #ffffff;
-$icon-hover-color: #a00411; 
-$sidebar-width: 4rem; 
+$icon-hover-color: #a00411;
+$sidebar-width: 3.5rem;
 
 .sidebar {
-  position: fixed;      
-  top: 0;               
-  left: 0;              
-  height: 100vh;      
   background-color: $background-color;
   width: $sidebar-width;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  gap: 2.3rem;
-  cursor: pointer;
-  z-index: 60;   
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  z-index: 60;
 
-  i {
-    color: $icon-color;
-    font-size: 1rem;
-    transition: color 0.3s;
-    position: relative; 
-
-    &:hover {
-      color: $icon-hover-color;
-    }
+  img {
+    width: 2rem;
+    height: auto;
+    align-self: center;
   }
+  
+  .icons-container a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  .notification {
-    position: absolute;
-    top: 0.1rem;
-    left: 0.6rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: rgb(255, 123, 0);
-    border-radius: 50%;
-    border: 1px solid $icon-color; 
+.icons-container a:hover i {
+  background-color: #555454;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+  .icons-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.3rem;
+    align-items: center;
+
+    i {
+      color: $icon-color;
+      font-size: 1rem;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        background-color: #555454;
+        padding: 10px;
+        border-radius: 10px;
+         transition: 0.3s;
+      }
+    }
+
+    .notification {
+      position: absolute;
+      top: 0.1rem;
+      left: 0.6rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: rgb(255, 123, 0);
+      border-radius: 50%;
+      border: 1px solid white;
+    }
   }
 }
