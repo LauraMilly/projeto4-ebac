@@ -2,7 +2,7 @@
 @use './components/header';
 @use './components/sidebar';
 
-$bgcolor: #ffffff;
+$bgcolor: #000000;
 
 *{
   margin: 0;
@@ -13,6 +13,6 @@ $bgcolor: #ffffff;
 
 body {
   background-color: $bgcolor;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: "Jonathan Ball", sans-serif;
 }

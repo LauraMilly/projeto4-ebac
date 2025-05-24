@@ -7,7 +7,7 @@ section.home {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 90vh;
   position: relative;
   color: #ffffff;
 }
@@ -18,7 +18,7 @@ section.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 6rem;
+  margin-left: 5.2rem;
   max-width: 500px;
 
   h2 {

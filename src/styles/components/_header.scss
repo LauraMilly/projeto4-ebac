@@ -20,6 +20,7 @@ $text-muted: #b3b3b3;
     font-size: 1.75rem;
     font-weight: bold;
     color: $pink;
+    margin-left: 2rem;
 
     span {
       color: $text-color;
@@ -29,6 +30,7 @@ $text-muted: #b3b3b3;
   .nav {
     display: flex;
     gap: 1rem;
+    margin-left: 3rem;
 
     a {
       color: $text-muted;
@@ -55,6 +57,7 @@ $text-muted: #b3b3b3;
 
     &.active {
       display: flex;
+      margin-right: 3rem;
     }
   }
 

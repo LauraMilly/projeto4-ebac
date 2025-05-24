@@ -6,7 +6,7 @@ $sidebar-width: 3.5rem;
 .sidebar {
   background-color: $background-color;
   width: $sidebar-width;
-  height: 100vh;
+  height: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ $sidebar-width: 3.5rem;
     height: auto;
     align-self: center;
   }
-  
+
   .icons-container a {
   color: inherit;
   text-decoration: none;
