@@ -9,18 +9,23 @@
   <link rel="stylesheet" href="dist/css/main.css"/>
 </head>
 <body class="bg-black text-white min-h-screen">
-  <div class="flex flex-col">
-  <header class="header w-full fixed top-0 left-0 flex items-center justify-between px-4 sm:px-8 py-4 bg-black/50 backdrop-blur z-50">
-    <nav class="flex gap-4 sm:gap-6 text-gray-300 text-xs sm:text-sm">
-      <a href="#films" class="hover:text-white">Movies</a>
-      <a href="#films" class="hover:text-white">Series</a>
-      <a href="#films" class="hover:text-white">TV Shows</a>
+<div class="flex flex-col">
+  <header class="header">
+   <nav class="nav">
+    <a href="#films">Movies</a>
+    <a href="#series">Series</a>
+    <a href="#tvshows">TV Shows</a>
     </nav>
-    <h1 class="text-xl sm:text-2xl font-bold text-pink-600">
-      Film<span class="text-white">box</span>
-    </h1>
-    <img src="src/images/user.jpg" alt="User" class="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-pink-600"/>
+    <h1>Film<span>box</span></h1>
+    <div class="actions">
+      <i class="fi fi-rr-search"></i>
+      <span class="username">UserName</span>
+      <div class="menu-toggle">
+        <i class="fi fi-rr-menu-burger"></i>
+      </div>
+    </div>
   </header>
+
 
 <!-- section Home -->
 <section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
@@ -39,15 +44,26 @@
   </div>
 </aside>
 
-<div class="text flex-1 z-20 flex flex-col justify-center">
-  <h2 class="text-4xl font-bold mb-4">The Batman</h2>
-  <p class="text-lg text-gray-400 max-w-md">
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor, atque nesciunt unde ipsa quas architecto facilis dicta doloribus libero tempora mollitia vero neque laudantium aliquam fugit ad praesentium earum.
+<div class="text">
+  <h2>The Batman</h2>
+  <div class="rating">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <span>4.8</span>
+  </div>
+  <span class="date">Fevereiro-2022</span>
+  <p>
+   Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.
   </p>
+  <div class="buttons">
+    <button class="primary">Ver filmes</button>
+    <button class="secondary">+</button>
+  </div>
 </div>
 
 <!-- Imagem -->
-
+  <div class="img">
+    <img src="src/images/batman-png.png" alt="">
+  </div>
 
     </section>
 

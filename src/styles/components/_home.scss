@@ -12,6 +12,119 @@ section.home {
   color: #ffffff;
 }
 
+.text {
+  flex: 1;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  max-width: 500px;
+
+  h2 {
+    font-size: 3.25rem; 
+    font-weight: 700;   
+    margin-bottom: 0.6rem; 
+    color: white;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    margin-bottom: 4rem; 
+
+    .stars {
+      color: #facc15; 
+    }
+
+    span {
+      color: white;
+      font-size: 1.125rem; 
+    }
+  }
+
+  p {
+    font-size: 1.125rem; 
+    color: #9ca3af; 
+    max-width: 500px;
+    margin-bottom: 2rem; 
+  }
+
+.date {
+  display: inline-block;
+  color: #f2f4f7; 
+  font-weight: bolder;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+    }
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    border: none;
+    padding: 0.5rem 1.5rem;
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+    transform: skew(-15deg);
+    display: inline-block;
+
+    &:hover {
+      background-color: #f0f0f0;
+      border-color: #555;
+    }
+
+    > span {
+      display: inline-block;
+      transform: skew(15deg);
+    }
+
+    &.primary {
+      background-color: #dc2626;
+      color: #f1f1f1;
+      font-weight: 200;
+      border-color: #b91c1c;
+      width: 200px;
+      box-shadow:  0 0 8px 3px rgb(255, 0, 0);
+      transition: background-color 0.3s, border-color 0.3s, transform 0.3s ease;
+
+
+      &:hover {
+        background-color: #b91c1c;
+        border-color: #d13434;
+        transform: scale(1.05)
+      }
+    }
+
+    &.secondary {
+      background-color: #374151;
+      color: #b6b6b6;
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      border-color: #1f2937;
+
+      &:hover {
+        background-color: #1f2937;
+        border-color: #111827;
+      }
+    }
+  }
+}
+
+
+}
+
+
 .batman-image {
   height: 760px;
   object-fit: contain;

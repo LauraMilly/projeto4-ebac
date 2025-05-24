@@ -26,9 +26,9 @@ $text-muted: #b3b3b3;
     }
   }
 
-  nav {
+  .nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 
     a {
       color: $text-muted;
@@ -40,12 +40,59 @@ $text-muted: #b3b3b3;
         color: $text-color;
       }
     }
+
+    @media (max-width: 640px) {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 2rem;
+      background-color: rgba(0, 0, 0, 0.95);
+      flex-direction: column;
+      padding: 1rem;
+      border-radius: 8px;
+      gap: 1rem;
+    }
+
+    &.active {
+      display: flex;
+    }
   }
 
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-    border: 2px solid $pink;
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    i {
+      color: $text-color;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+
+    .username {
+      color: $text-muted;
+      font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+
+      i {
+        font-size: 1.5rem;
+        color: $text-color;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
   }
 }
