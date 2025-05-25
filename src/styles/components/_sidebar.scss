@@ -22,17 +22,6 @@ $sidebar-width: 3.5rem;
     align-self: center;
   }
 
-  .icons-container a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.icons-container a:hover i {
-  background-color: #555454;
-  padding: 10px;
-  border-radius: 10px;
-}
-
   .icons-container {
     flex-grow: 1;
     display: flex;
@@ -41,18 +30,37 @@ $sidebar-width: 3.5rem;
     gap: 2.3rem;
     align-items: center;
 
+    a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+
+      i {
+        font-size: 1rem;
+        position: relative;
+        color: $icon-color;
+        transition: background-color 0.3s, padding 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $icon-hover-color;
+          padding: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+
     i {
       color: $icon-color;
       font-size: 1rem;
       position: relative;
       cursor: pointer;
-      transition: color 0.3s;
+      transition: background-color 0.3s, padding 0.3s;
 
       &:hover {
-        background-color: #555454;
+        background-color: $icon-hover-color;
         padding: 10px;
         border-radius: 10px;
-         transition: 0.3s;
       }
     }
 

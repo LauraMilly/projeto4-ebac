@@ -1,3 +1,4 @@
+// 🎨 Variaveis
 $border-color: #2d2d2d;
 $pink: #a00411;
 $text-color: #ffffff;
@@ -26,7 +27,6 @@ $text-muted: #b3b3b3;
       color: $text-color;
     }
   }
-
   .nav {
     display: flex;
     gap: 1rem;
@@ -42,9 +42,7 @@ $text-muted: #b3b3b3;
         color: $text-color;
       }
     }
-
     @media (max-width: 640px) {
-      display: none;
       position: absolute;
       top: 100%;
       right: 2rem;
@@ -53,11 +51,18 @@ $text-muted: #b3b3b3;
       padding: 1rem;
       border-radius: 8px;
       gap: 1rem;
-    }
 
-    &.active {
-      display: flex;
-      margin-right: 3rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+      // Estado aberto
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
     }
   }
 
@@ -81,7 +86,6 @@ $text-muted: #b3b3b3;
       color: $text-muted;
       font-size: 0.9rem;
     }
-
     .menu-toggle {
       display: none;
       cursor: pointer;
