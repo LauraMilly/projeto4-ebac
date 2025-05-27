@@ -10,6 +10,7 @@
 </head>
 <body class="bg-black text-white min-h-screen">
 <div class="flex flex-col">
+
 <header class="header">
   <nav class="nav" id="menu">
     <a href="#films">Movies</a>
@@ -18,8 +19,20 @@
   </nav>
   <h1>Film<span>box</span></h1>
   <div class="actions">
-    <i class="fi fi-rr-search"></i>
-    <span class="username">UserName</span>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." id="searchInput" />
+      <i class="fi fi-rr-search" id="searchIcon"></i>
+    </div>
+    <div class="user-menu">
+      <span class="username">Usuario</span>
+      <i class="fi fi-rr-angle-small-down" id="userMenuToggle"></i>
+      <div class="dropdown" id="userDropdown">
+        <a href="#">Usuario 1</a>
+        <a href="#">Usuario 2</a>
+        <a href="#">Usuario 3</a>
+      </div>
+    </div>
+    <img src="src/images/prfile-net.jpg" alt="Profile" class="profile-img" />
     <div class="menu-toggle" id="btnMenu">
       <i class="fi fi-rr-menu-burger"></i>
     </div>
@@ -27,7 +40,7 @@
 </header>
 
 
-<!-- section Home -->
+
 <section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
   <aside class="sidebar">
     <img src="src/images/logo2-png.png" alt="Logo">
@@ -35,8 +48,7 @@
       <a href="#home"><i class="fi fi-rr-home"></i></a>
       <i class="fi fi-rr-apps"></i>
       <i class="fi fi-rr-comment"><span class="notification"></span></i>
-      <i class="fi fi-rr-user"><span class="notification"></span>
-      </i>
+      <i class="fi fi-rr-user"><span class="notification"></span></i>
       <i class="fi fi-rr-heart"></i>
       <i class="fi fi-rr-share"></i>
       <i class="fi fi-rr-screen"></i>
@@ -59,22 +71,27 @@
       <button class="secondary">+</button>
     </div>
   </div>
-  <div class="img">
-    <img src="src/images/batman-fundo.png" alt="">
+
+  <div class="img relative">
+    <img src="src/images/batman-fundo.png" alt="Batman" class="w-[550px]">
+    <button onclick="window.open('https://www.imdb.com/pt/title/tt1877830/', '_blank')"
+      class="play-button absolute top-[200px] left-1/2 transform -translate-x-1/2
+      bg-white text-black text-2xl p-5 rounded-full shadow-lg hover:scale-110 transition">
+      <i class="fa-solid fa-play"></i>
+    </button>
+
   </div>
 
 </section>
 
-    <!-- Outra section -->
-    <section class="p-10">
-      <h1 class="text-2xl mb-4"></h1>
-      <p class="text-gray-400">
-        lo
-      </p>
-    </section>
+<section class="p-10">
+  <h1 class="text-2xl mb-4"></h1>
+  <p class="text-gray-400">
+    lo
+  </p>
+</section>
 
-  </div>
-  <script src="./dist/js/main.js" defer></script>
+</div>
+<script src="./dist/js/main.js" defer></script>
 </body>
-
 </html>

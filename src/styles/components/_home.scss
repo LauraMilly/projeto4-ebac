@@ -1,5 +1,18 @@
+@use "sass:color";
+
 $font-color: #ffffff;
 $princi-color: #fc142c;
+$background-dark: #000000;
+$background-secondary: #080808;
+$neutral-gray: #9ca3af;
+$neutral-light: #f2f4f7;
+$neutral-dark: #1f2937;
+$button-secondary-bg: #374151;
+$button-secondary-hover: #1f2937;
+$button-text-color: #b6b6b6;
+$shadow-red: rgba(255, 0, 0, 0.7);
+$shadow-soft: rgba(0, 0, 0, 0.5);
+$star-color: #facc15;
 
 section.home {
   background-image: 
@@ -13,14 +26,21 @@ section.home {
   position: relative;
   color: $font-color;
 
+  @media (max-width: 768px) {
+    height: 66vh;
+  }
+
   .img {
     position: absolute;
     right: 0;
     bottom: 0;
     max-width: 800px;
-    max-height: 800px;
-    filter: drop-shadow(0 0 30px #ff051a);
-
+    max-height: 790px;
+    filter: drop-shadow(0 0 10px $princi-color);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
       width: 100%;
@@ -28,8 +48,46 @@ section.home {
       object-fit: contain;
     }
 
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-dark;
+      color: $font-color;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 30px $shadow-red;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      border: 1px solid $princi-color;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        background-color: $background-secondary;
+      }
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
     @media (max-width: 768px) {
       display: none;
+    }
+
+    @media (max-width: 1260px) {
+      max-width: 600px;
+      max-height: 600px;
+    }
+
+    @media (max-width: 1044px) {
+      max-width: 500px;
+      max-height: 600px;
     }
   }
 
@@ -39,7 +97,7 @@ section.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 5.2rem;
+    margin-left: 4rem;
     max-width: 400px;
 
     h2 {
@@ -47,6 +105,10 @@ section.home {
       font-weight: 700;
       margin-bottom: 0.6rem;
       color: $font-color;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     .rating {
@@ -56,7 +118,7 @@ section.home {
       margin-bottom: 4rem;
 
       .stars {
-        color: #facc15;
+        color: $star-color;
       }
 
       span {
@@ -67,20 +129,30 @@ section.home {
 
     p {
       font-size: 1.125rem;
-      color: #9ca3af;
+      color: $neutral-gray;
       max-width: 500px;
       margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.9rem;
+      }
     }
 
     .date {
       display: inline-block;
-      color: #f2f4f7;
+      color: $neutral-light;
       font-weight: bolder;
       font-size: 0.875rem;
       margin-bottom: 1rem;
       padding-bottom: 2px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 1.5rem;
+      height: auto;
+      width: auto;
     }
 
     .buttons {
@@ -96,7 +168,7 @@ section.home {
         border-radius: 0.75rem;
         font-weight: 600;
         font-size: 1rem;
-        transition: background-color 0.3s, border-color 0.3s;
+        transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
         transform: skew(-15deg);
         display: inline-block;
 
@@ -112,30 +184,29 @@ section.home {
 
         &.primary {
           background-color: $princi-color;
-          color: #f1f1f1;
+          color: $neutral-light;
           font-weight: 200;
-          border-color: #ff0000;
+          border-color: $princi-color;
           width: 200px;
-          box-shadow: 0 0 8px 3px rgb(255, 0, 0);
-          transition: background-color 0.3s, border-color 0.3s, transform 0.3s ease;
+          box-shadow: 0 0 8px 3px $princi-color;
 
           &:hover {
-            background-color: #b91c1c;
-            border-color: #d13434;
+            background-color: color.adjust($princi-color, $lightness: -10%);
+            border-color: color.adjust($princi-color, $lightness: -15%);
             transform: scale(1.05);
           }
         }
 
         &.secondary {
-          background-color: #374151;
-          color: #b6b6b6;
+          background-color: $button-secondary-bg;
+          color: $button-text-color;
           padding: 0.5rem 1rem;
           font-size: 1.25rem;
-          border-color: #1f2937;
+          border-color: $neutral-dark;
 
           &:hover {
-            background-color: #1f2937;
-            border-color: #111827;
+            background-color: $button-secondary-hover;
+            border-color: color.adjust($neutral-dark, $lightness: -10%);
           }
         }
       }
