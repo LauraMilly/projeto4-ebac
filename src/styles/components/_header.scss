@@ -1,9 +1,4 @@
-$border-color: #2d2d2d;
-$pink: #a00411;
-$text-color: #ffffff;
-$text-muted: #b3b3b3;
-$transition-fast: 0.2s ease-in-out;
-$transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+@use './variables' as *;
 
 .header {
   position: fixed;
@@ -17,6 +12,69 @@ $transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   z-index: 50;
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #4b5563;
+    transition: 0.4s;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .switch input:checked + .slider {
+    background-color: #ef4444;
+  }
+
+  .switch input:checked + .slider::before {
+    transform: translateX(32px);
+  }
+
+  .icon {
+    pointer-events: none;
+  }
+
+  .sun {
+    fill: #facc15; 
+    stroke: #fbbf24;
+  }
+
+  .moon {
+    fill: #f3f4f6; 
+  }
+
 
   h1 {
     font-size: 1.75rem;
@@ -114,8 +172,8 @@ $transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         margin-left: 0.5rem;
         transition: color $transition-fast, transform $transition-fast;
         background-color: #2d2d2d;
-        padding: 9px;
-        border-radius: 100%;
+        padding: 10px !important;
+        border-radius: 100% !important;
 
         &:hover {
           color: $pink;

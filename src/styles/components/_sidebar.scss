@@ -1,12 +1,5 @@
 @use "sass:color";
-
-$background-color: #1b1c1c;
-$icon-color: #ffffff;
-$icon-hover-color: #a00411;
-$sidebar-width: 3.5rem;
-
-$notification-bg: #ff7b00;
-$notification-border: #ffffff;
+@use './variables' as *;
 
 .sidebar {
   background-color: $background-color;

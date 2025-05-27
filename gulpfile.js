@@ -34,13 +34,21 @@ export function tailwindStyles() {
     .on('end', () => console.log('Tailwind Styles gerados'));
 }
 
-
 export function customStyles() {
   return gulp
-    .src('./src/styles/main.scss')
+    .src([
+      './src/styles/main.scss',
+      './src/styles/theme-light.scss',
+      './src/styles/theme-dark.scss',
+    ])
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/css'))
+    .on('end', () => console.log('Temas compilados!'));
 }
+
+
 
 export function images() {
   return gulp
@@ -67,13 +75,13 @@ export function images() {
     .on('end', () => console.log('Imagens processadas!'));
 }
 
-
-
 export function watchFiles() {
+  gulp.watch('./src/styles/components/**/*.scss', customStyles);  
+  gulp.watch('./src/styles/*.scss', customStyles);                
   gulp.watch('./src/styles/tailwind.scss', tailwindStyles);
-  gulp.watch('./src/styles/**/*.scss', customStyles);
   gulp.watch('./src/images/**/*.{jpg,jpeg,png,svg}', images);
   gulp.watch('./src/js/**/*.js', scripts);
 }
+
 
 export default gulp.parallel(tailwindStyles, customStyles, images, scripts, watchFiles);

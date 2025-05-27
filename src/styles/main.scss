@@ -1,18 +1,19 @@
-@use './components/home';
+@use './components/variables' as *;
 @use './components/header';
+@use './components/home';
 @use './components/sidebar';
+@use './components/theme-dark';
+@use './components/theme-light';
 
-$bgcolor: #000000;
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 body {
-  background-color: $bgcolor;
-  color: rgb(255, 255, 255);
+  background-color: $background-secondary;
+  color: $font-color;
   font-family: "Jonathan Ball", sans-serif;
 }
