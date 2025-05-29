@@ -12,102 +12,177 @@
 <body class="bg-white text-black dark:bg-black dark:text-white">
   <div class="flex flex-col">
 
-    <header class="header">
-      <nav class="nav" id="menu">
-        <a href="#films">Movies</a>
-        <a href="#series">Series</a>
-        <a href="#tvshows">TV Shows</a>
-      </nav>
-      <h1>Film<span>box</span></h1>
-      <div class="actions">
-        <div class="search-container">
-          <input type="text" placeholder="Search..." id="searchInput"/>
-          <i class="fi fi-rr-search" id="searchIcon"></i>
+      <header class="header">
+        <nav class="nav" id="menu">
+          <a href="#films">Movies</a>
+          <a href="#series">Series</a>
+          <a href="#tvshows">TV Shows</a>
+        </nav>
+        <h1>Film<span>box</span></h1>
+        <div class="actions">
+          <div class="search-container">
+            <input type="text" placeholder="Search..." id="searchInput"/>
+            <i class="fi fi-rr-search" id="searchIcon"></i>
+          </div>
+          <div class="user-menu">
+            <span class="username">Usuario</span>
+            <i class="fi fi-rr-angle-small-down" id="userMenuToggle"></i>
+            <div class="dropdown" id="userDropdown">
+              <a href="#">Usuario 1</a>
+              <a href="#">Usuario 2</a>
+              <a href="#">Usuario 3</a>
+            </div>
+          </div>
+          <img src="src/images/perfil-justin.JPG" alt="Profile" class="profile-img"/>
+          <div class="menu-toggle" id="btnMenu">
+            <i class="fi fi-rr-menu-burger"></i>
+          </div>
+        <label class="switch ml-4">
+          <input type="checkbox" id="themeToggleBtn" aria-label="Toggle Theme"/>
+          <span class="slider">
+            <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow" width="16" height="16" aria-hidden="true">
+              <circle cx="12" cy="12" r="5" />
+              <g stroke="yellow" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="4"/>
+                <line x1="12" y1="20" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="4" y2="12"/>
+                <line x1="20" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+              </g>
+            </svg>
+            <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
+            </svg>
+          </span>
+        </label>
         </div>
-        <div class="user-menu">
-          <span class="username">Usuario</span>
-          <i class="fi fi-rr-angle-small-down" id="userMenuToggle"></i>
-          <div class="dropdown" id="userDropdown">
-            <a href="#">Usuario 1</a>
-            <a href="#">Usuario 2</a>
-            <a href="#">Usuario 3</a>
+      </header>
+
+      <section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
+        <aside class="sidebar">
+          <img src="dist/images/logo2-png.png" alt="Logo"/>
+          <div class="icons-container">
+            <a href="#home"><i class="fi fi-rr-home"></i></a>
+            <i class="fi fi-rr-apps"></i>
+            <i class="fi fi-rr-comment"><span class="notification"></span></i>
+            <i class="fi fi-rr-user"><span class="notification"></span></i>
+            <i class="fi fi-rr-heart"></i>
+            <i class="fi fi-rr-share"></i>
+            <i class="fi fi-rr-screen"></i>
+            <a href="#films"><i class="fi fi-rr-film"></i></a>
+          </div>
+        </aside>
+
+        <div class="text">
+          <h2>The Batman</h2>
+          <div class="rating">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span>4.8</span>
+          </div>
+          <span class="date">Fevereiro-2022</span>
+          <p>
+            Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.
+          </p>
+          <div class="buttons">
+            <a href="#films"><button class="primary">Ver filmes</button></a>
+            <button class="secondary">+</button>
           </div>
         </div>
-        <img src="src/images/prfile-net.jpg" alt="Profile" class="profile-img"/>
-        <div class="menu-toggle" id="btnMenu">
-          <i class="fi fi-rr-menu-burger"></i>
-        </div>
-      <label class="switch ml-4">
-        <input type="checkbox" id="themeToggleBtn" aria-label="Toggle Theme"/>
-        <span class="slider">
-          <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow" width="16" height="16" aria-hidden="true">
-            <circle cx="12" cy="12" r="5" />
-            <g stroke="yellow" stroke-width="2">
-              <line x1="12" y1="1" x2="12" y2="4"/>
-              <line x1="12" y1="20" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
-              <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="4" y2="12"/>
-              <line x1="20" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
-              <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
-            </g>
-          </svg>
-          <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
-          </svg>
-        </span>
-      </label>
-      </div>
-    </header>
 
-    <section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
-      <aside class="sidebar">
-        <img src="src/images/logo2-png.png" alt="Logo"/>
-        <div class="icons-container">
-          <a href="#home"><i class="fi fi-rr-home"></i></a>
-          <i class="fi fi-rr-apps"></i>
-          <i class="fi fi-rr-comment"><span class="notification"></span></i>
-          <i class="fi fi-rr-user"><span class="notification"></span></i>
-          <i class="fi fi-rr-heart"></i>
-          <i class="fi fi-rr-share"></i>
-          <i class="fi fi-rr-screen"></i>
-          <a href="#films"><i class="fi fi-rr-film"></i></a>
+        <div class="img relative">
+          <img src="dist/images/batman-fundo.png" alt="Batman" class="w-[550px]"/>
+          <button
+            onclick="window.open('https://www.imdb.com/pt/title/tt1877830/', '_blank')"
+            class="play-button absolute top-[200px] left-1/2 transform -translate-x-1/2
+            bg-white text-black text-2xl p-5 rounded-full shadow-lg hover:scale-110 transition"
+          >
+            <i class="fa-solid fa-play"></i>
+          </button>
         </div>
-      </aside>
+      </section>
 
-      <div class="text">
-        <h2>The Batman</h2>
-        <div class="rating">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <span>4.8</span>
+      <section id="films" class="films p-10">
+        <h1 class="text-2xl mb-4">Recomendações</h1>
+          <div class="search__container">
+            <nav class="show__films">
+              <button data-tab-button="adventure" class="show_tabs_button show_tabs_button--is--active">Aventura</button>
+              <button data-tab-button="fantasy" class="show_tabs_button">Fantasia</button>
+              <button data-tab-button="terror" class="show_tabs_button">Terror</button>
+            </nav>
+            
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Buscar filme...">
+            </div>
+
+          </div>
+
+          <p class="search__message" id="searchMessage"></p>
+
+
+
+          <ul data-tab-id="adventure" class="films_list">
+          <li class="films_list_item"><img src="dist/images/home-aranha-volta-para-casa.jpg" alt="home-aranha"></li>
+          <li class="films_list_item"><img src="dist/images/homem-de-ferro.jpg" alt="homem-de-ferro"></li>
+          <li class="films_list_item"><img src="dist/images/the-batman.jpg" alt="the-batman-filme"></li>
+          <li class="films_list_item"><img src="dist/images/vingadores-guerra-infinita.jpg" alt="vinagadores"></li>
+          <li class="films_list_item"><img src="dist/images/capita-america.jpg" alt="capitao-america"></li>
+          <li class="films_list_item"><img src="dist/images/guerra-civil.jpg" alt="guerra-civil"></li>
+          <li class="films_list_item"><img src="dist/images/liga-da-justiça.jpg" alt="liga-da-justiça"></li>
+          <li class="films_list_item"><img src="dist/images/dunas-filme.jpg" alt="dunas-filme"></li>
+          <li class="films_list_item"><img src="dist/images/homem-aranha-aranhaverso.jpg" alt="aranhaverso-filme"></li>
+          <li class="films_list_item"><img src="src/images/super-men.webp" alt="super-men"></li>
+          <li class="films_list_item"><img src="dist/images/x-men-filme.jpg" alt="x-men"></li>
+          <li class="films_list_item"><img src="dist/images/pixels-capa.jpg" alt="pixels-filme"></li>
+          <li class="films_list_item"><img src="dist/images/morbius-filme-capa.jpg" alt="morbius-filme"></li>
+        </ul>
+        <div class="pagination">
+          <button class="page active">1</button>
+          <button class="page">2</button>
         </div>
-        <span class="date">Fevereiro-2022</span>
-        <p>
-          Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece como a personificação da vingança para a população.
-        </p>
-        <div class="buttons">
-          <button class="primary">Ver filmes</button>
-          <button class="secondary">+</button>
+
+          <ul data-tab-id="fantasy" class="films_list">
+          <li class="films_list_item"><img src="dist/images/hp-pedra-filosofal.jpg" alt="hp-pedra-filo"></li>
+          <li class="films_list_item"><img src="src/images/alice-no-país.webp" alt="alice-no-país-das-maravilhas"></li>
+          <li class="films_list_item"><img src="dist/images/edward-maos-de-tesoura.jpg" alt="edward-maos-de-tesoura"></li>
+          <li class="films_list_item"><img src="dist/images/narnia-filme.jpg" alt="narnia"></li>
+          <li class="films_list_item"><img src="dist/images/harry-potter-calice.jpg" alt="harry-potter-calice"></li>
+          <li class="films_list_item"><img src="dist/images/rings-of-power.jpg" alt="ring-of-power"></li>
+          <li class="films_list_item"><img src="dist/images/senhor-dos-aneis.jpg" alt="senhor-dos-aneis"></li>
+          <li class="films_list_item"><img src="dist/images/piratas-do-caribe.jpg" alt="piratas-do-caribe"></li>
+          <li class="films_list_item"><img src="src/images/a-fantstica-fabrica.webp" alt="a-fantasica"></li>
+          <li class="films_list_item"><img src="src/images/artur-e-os-minimoys.jpg" alt="artur-e-os-minomoys"></li>
+          <li class="films_list_item"><img src="src/images/labritinto-do-fauno.webp" alt="labirinto-do-fauno"></li>
+          <li class="films_list_item"><img src="src/images/os fantasmas-de-scroog.webp" alt="os-fantasmas"></li>
+          <li class="films_list_item"><img src="dist/images/parcy-mar-de-mosntros.jpg" alt="parcy-filme"></li>
+        </ul>
+        <div class="pagination">
+          <button class="page active">1</button>
+          <button class="page">2</button>
         </div>
-      </div>
 
-      <div class="img relative">
-        <img src="src/images/batman-fundo.png" alt="Batman" class="w-[550px]"/>
-        <button
-          onclick="window.open('https://www.imdb.com/pt/title/tt1877830/', '_blank')"
-          class="play-button absolute top-[200px] left-1/2 transform -translate-x-1/2
-          bg-white text-black text-2xl p-5 rounded-full shadow-lg hover:scale-110 transition"
-        >
-          <i class="fa-solid fa-play"></i>
-        </button>
-      </div>
-    </section>
-
-    <section class="p-10">
-      <h1 class="text-2xl mb-4"></h1>
-      <p class="text-gray-400">lo</p>
-    </section>
+          <ul data-tab-id="terror" class="films_list">
+          <li class="films_list_item"><img src="dist/images/a-hora-do-vampiro.jpg" alt="a-hora-do-vamp"></li>
+          <li class="films_list_item"><img src="dist/images/a-substancia.jpg" alt="a-substancia"></li>
+          <li class="films_list_item"><img src="dist/images/sorria-filme.jpg" alt="sorria-filme"></li>
+          <li class="films_list_item"><img src="dist/images/boneco-do-mal.jpg" alt="boneco-do-mal-filme"></li>
+          <li class="films_list_item"><img src="dist/images/invocação-do-mal2.jpg" alt="invocação-do-mal-filme"></li>
+          <li class="films_list_item"><img src="dist/images/megan-filme.jpg" alt="megan-filme"></li>
+          <li class="films_list_item"><img src="dist/images/verão-de-84-poster.jpg" alt="varao-84-filme"></li>
+          <li class="films_list_item"><img src="dist/images/creep-filme.jpg" alt="creep-filme"></li>
+          <li class="films_list_item"><img src="src/images/corra-filme.webp" alt="corra-filme"></li>
+          <li class="films_list_item"><img src="src/images/annabelle.webp" alt="anaballe-fimle"></li>
+          <li class="films_list_item"><img src="src/images/o-macaco-filme.webp" alt="o-macaco-filme"></li>
+          <li class="films_list_item"><img src="src/images/it-a-coisa.webp" alt="it-a-coisa-filme"></li>
+          <li class="films_list_item"><img src="src/images/rua-do-medo.webp" alt="rua-do-medo-filme"></li>
+        </ul>
+        <div class="pagination">
+          <button class="page active">1</button>
+          <button class="page">2</button>
+        </div>
+      </section>
 
   </div>
 

@@ -75,6 +75,37 @@
   }
 
   @media (max-width: 768px) {
-    display: none !important;;
+    display: none !important;
+  }
+}
+
+body.light-theme {
+  .sidebar {
+    background-color: $sidebar-bg-light;
+
+    .icons-container {
+      a i,
+      i {
+        color: $icon-color-light;
+
+        &:hover {
+          color: $icon-hover-light;
+        }
+      }
+    }
+
+  }
+}
+
+body.dark-theme {
+  .sidebar {
+    background-color: $background-color;
+
+    .icons-container {
+      a i,
+      i {
+        color: $icon-color;
+      }
+    }
   }
 }
