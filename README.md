@@ -24,6 +24,7 @@ O **Filmbox** é uma landing page responsiva que simula uma plataforma de filmes
 
 ## 📂 Estrutura de pastas
 
+ ```
 ├── dist/
 │ ├── css/
 │ ├── images/
@@ -35,6 +36,7 @@ O **Filmbox** é uma landing page responsiva que simula uma plataforma de filmes
 ├── gulpfile.js
 ├── package.json
 └── index.html
+ ```
 
 bash
 Copiar
