@@ -4,13 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Filmbox - The Batman</title>
-  <link rel="icon" type="image/png" href="./images/video.png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/tailwind.css" />
+  <link rel="stylesheet" href="dist/css/tailwind.css"/>
+  <link rel="stylesheet" href="dist/css/main.css"/>
 </head>
-
 <body class="bg-white text-black dark:bg-black dark:text-white">
   <div class="flex flex-col">
 
@@ -44,7 +42,7 @@
 
       <section id="home" class="home flex flex-row px-4 sm:px-8 py-12 space-x-8 items-center pt-28 bg-cover bg-center">
         <aside class="sidebar">
-          <img src="./images/logo2-png.png" alt="Logo"/>
+          <img src="dist/images/logo2-png.png" alt="Logo"/>
           <div class="icons-container">
             <a href="#home"><i class="fi fi-rr-home"></i></a>
             <i class="fi fi-rr-apps"></i>
@@ -74,7 +72,7 @@
         </div>
 
         <div class="img relative">
-          <img src="./images/batman-fundo.png" alt="Batman" class="w-[550px]"/>
+          <img src="dist/images/batman-fundo.png" alt="Batman" class="w-[550px]"/>
           <button
             onclick="window.open('https://www.imdb.com/pt/title/tt1877830/', '_blank')"
             class="play-button absolute top-[200px] left-1/2 transform -translate-x-1/2
@@ -95,19 +93,19 @@
             </nav>
 
           <ul data-tab-id="adventure" class="films_list">
-          <li class="films_list_item"><img src="./images/home-aranha-volta-para-casa.jpg" alt="home-aranha"></li>
-          <li class="films_list_item"><img src="./images/homem-de-ferro.jpg" alt="homem-de-ferro"></li>
-          <li class="films_list_item"><img src="./images/the-batman.jpg" alt="the-batman-filme"></li>
-          <li class="films_list_item"><img src="./images/vingadores-guerra-infinita.jpg" alt="vinagadores"></li>
-          <li class="films_list_item"><img src="./images/capita-america.jpg" alt="capitao-america"></li>
-          <li class="films_list_item"><img src="./images/guerra-civil.jpg" alt="guerra-civil"></li>
-          <li class="films_list_item"><img src="./images/liga-da-justiça.jpg" alt="liga-da-justiça"></li>
-          <li class="films_list_item"><img src="./images/dunas-filme.jpg" alt="dunas-filme"></li>
-          <li class="films_list_item"><img src="./images/homem-aranha-aranhaverso.jpg" alt="aranhaverso-filme"></li>
+          <li class="films_list_item"><img src="dist/images/home-aranha-volta-para-casa.jpg" alt="home-aranha"></li>
+          <li class="films_list_item"><img src="dist/images/homem-de-ferro.jpg" alt="homem-de-ferro"></li>
+          <li class="films_list_item"><img src="dist/images/the-batman.jpg" alt="the-batman-filme"></li>
+          <li class="films_list_item"><img src="dist/images/vingadores-guerra-infinita.jpg" alt="vinagadores"></li>
+          <li class="films_list_item"><img src="dist/images/capita-america.jpg" alt="capitao-america"></li>
+          <li class="films_list_item"><img src="dist/images/guerra-civil.jpg" alt="guerra-civil"></li>
+          <li class="films_list_item"><img src="dist/images/liga-da-justiça.jpg" alt="liga-da-justiça"></li>
+          <li class="films_list_item"><img src="dist/images/dunas-filme.jpg" alt="dunas-filme"></li>
+          <li class="films_list_item"><img src="dist/images/homem-aranha-aranhaverso.jpg" alt="aranhaverso-filme"></li>
           <li class="films_list_item"><img src="src/images/super-men.webp" alt="super-men"></li>
-          <li class="films_list_item"><img src="./images/x-men-filme.jpg" alt="x-men"></li>
-          <li class="films_list_item"><img src="./images/pixels-capa.jpg" alt="pixels-filme"></li>
-          <li class="films_list_item"><img src="./images/morbius-filme-capa.jpg" alt="morbius-filme"></li>
+          <li class="films_list_item"><img src="dist/images/x-men-filme.jpg" alt="x-men"></li>
+          <li class="films_list_item"><img src="dist/images/pixels-capa.jpg" alt="pixels-filme"></li>
+          <li class="films_list_item"><img src="dist/images/morbius-filme-capa.jpg" alt="morbius-filme"></li>
         </ul>
         <div class="pagination">
           <button class="page active">1</button>
@@ -115,33 +113,34 @@
         </div>
 
           <ul data-tab-id="fantasy" class="films_list">
-          <li class="films_list_item"><img src="./images/hp-pedra-filosofal.jpg" alt="hp-pedra-filo"></li>
+          <li class="films_list_item"><img src="dist/images/hp-pedra-filosofal.jpg" alt="hp-pedra-filo"></li>
           <li class="films_list_item"><img src="src/images/alice-no-país.webp" alt="alice-no-país-das-maravilhas"></li>
-          <li class="films_list_item"><img src="./images/edward-maos-de-tesoura.jpg" alt="edward-maos-de-tesoura"></li>
-          <li class="films_list_item"><img src="./images/narnia-filme.jpg" alt="narnia"></li>
-          <li class="films_list_item"><img src="./images/harry-potter-calice.jpg" alt="harry-potter-calice"></li>
-          <li class="films_list_item"><img src="./images/rings-of-power.jpg" alt="ring-of-power"></li>
-          <li class="films_list_item"><img src="./images/senhor-dos-aneis.jpg" alt="senhor-dos-aneis"></li>
-          <li class="films_list_item"><img src="./images/piratas-do-caribe.jpg" alt="piratas-do-caribe"></li>
+          <li class="films_list_item"><img src="dist/images/edward-maos-de-tesoura.jpg" alt="edward-maos-de-tesoura"></li>
+          <li class="films_list_item"><img src="dist/images/narnia-filme.jpg" alt="narnia"></li>
+          <li class="films_list_item"><img src="dist/images/harry-potter-calice.jpg" alt="harry-potter-calice"></li>
+          <li class="films_list_item"><img src="dist/images/rings-of-power.jpg" alt="ring-of-power"></li>
+          <li class="films_list_item"><img src="dist/images/senhor-dos-aneis.jpg" alt="senhor-dos-aneis"></li>
+          <li class="films_list_item"><img src="dist/images/piratas-do-caribe.jpg" alt="piratas-do-caribe"></li>
           <li class="films_list_item"><img src="src/images/a-fantstica-fabrica.webp" alt="a-fantasica"></li>
           <li class="films_list_item"><img src="src/images/artur-e-os-minimoys.jpg" alt="artur-e-os-minomoys"></li>
           <li class="films_list_item"><img src="src/images/labritinto-do-fauno.webp" alt="labirinto-do-fauno"></li>
           <li class="films_list_item"><img src="src/images/os fantasmas-de-scroog.webp" alt="os-fantasmas"></li>
-          <li class="films_list_item"><img src="./images/parcy-mar-de-mosntros.jpg" alt="parcy-filme"></li>
+          <li class="films_list_item"><img src="dist/images/parcy-mar-de-mosntros.jpg" alt="parcy-filme"></li>
         </ul>
         <div class="pagination">
           <button class="page active">1</button>
           <button class="page">2</button>
         </div>
-          <ul data-tab-id="terror" class="films_list">
-          <li class="films_list_item"><img src="./images/a-hora-do-vampiro.jpg" alt="a-hora-do-vamp"></li>
-          <li class="films_list_item"><img src="./images/a-substancia.jpg" alt="a-substancia"></li>
-          <li class="films_list_item"><img src="./images/sorria-filme.jpg" alt="sorria-filme"></li>
-          <li class="films_list_item"><img src="./images/boneco-do-mal.jpg" alt="boneco-do-mal-filme"></li>
-          <li class="films_list_item"><img src="./images/invocação-do-mal2.jpg" alt="invocação-do-mal-filme"></li>
-          <li class="films_list_item"><img src="./images/megan-filme.jpg" alt="megan-filme"></li>
-          <li class="films_list_item"><img src="./images/verão-de-84-poster.jpg" alt="varao-84-filme"></li>
-          <li class="films_list_item"><img src="./images/creep-filme.jpg" alt="creep-filme"></li>
+
+          <ul data-tab-aid="terror" class="films_list">
+          <li class="films_list_item"><img src="dist/images/a-hora-do-vampiro.jpg" alt="a-hora-do-vamp"></li>
+          <li class="films_list_item"><img src="dist/images/a-substancia.jpg" alt="a-substancia"></li>
+          <li class="films_list_item"><img src="dist/images/sorria-filme.jpg" alt="sorria-filme"></li>
+          <li class="films_list_item"><img src="dist/images/boneco-do-mal.jpg" alt="boneco-do-mal-filme"></li>
+          <li class="films_list_item"><img src="dist/images/invocação-do-mal2.jpg" alt="invocação-do-mal-filme"></li>
+          <li class="films_list_item"><img src="dist/images/megan-filme.jpg" alt="megan-filme"></li>
+          <li class="films_list_item"><img src="dist/images/verão-de-84-poster.jpg" alt="varao-84-filme"></li>
+          <li class="films_list_item"><img src="dist/images/creep-filme.jpg" alt="creep-filme"></li>
           <li class="films_list_item"><img src="src/images/corra-filme.webp" alt="corra-filme"></li>
           <li class="films_list_item"><img src="src/images/annabelle.webp" alt="anaballe-fimle"></li>
           <li class="films_list_item"><img src="src/images/o-macaco-filme.webp" alt="o-macaco-filme"></li>
@@ -295,7 +294,7 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="light-switch">
-          <span>Apagar/Acender luz:</span>
+          <span>Apagar a Luz:</span>
           <label class="switch">
             <input type="checkbox" id="themeToggleBtn" />
             <span class="slider">
@@ -319,7 +318,7 @@
           </label>
         </div>
 
-        <img class="footer__logo" src="./images/logo2-png.png" alt="logo-video" />
+        <img class="footer__logo" src="dist/images/logo2-png.png" alt="logo-video" />
 
         <ul class="footer__links">
           <li class="footer__links__item">
@@ -341,6 +340,6 @@
     </footer>
   </div>
 
- <script src="./js/main.js" defer></script>
+  <script src="./dist/js/main.js" defer></script>
 </body>
 </html>

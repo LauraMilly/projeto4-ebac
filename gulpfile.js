@@ -14,15 +14,6 @@ import sourcemaps from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
 
-
-export function html() {
-  return gulp
-    .src('./index.html') 
-    .pipe(gulp.dest('./dist'))
-    .on('end', () => console.log('HTML copiado!'));
-}
-
-
 export function scripts() {
   return gulp
     .src('./src/js/**/*.js') 
@@ -87,7 +78,6 @@ export const build = gulp.series(
 );
 
 export function watchFiles() {
-  gulp.watch('./src/index.html', html);
   gulp.watch('./src/styles/components/**/*.scss', customStyles);  
   gulp.watch('./src/styles/*.scss', customStyles);                
   gulp.watch('./src/styles/tailwind.scss', tailwindStyles);
