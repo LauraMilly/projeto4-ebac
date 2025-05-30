@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Filmbox - The Batman</title>
+  <link rel="icon" type="image/png" href="dist/images/video.png" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="dist/css/tailwind.css"/>
   <link rel="stylesheet" href="dist/css/main.css"/>
 </head>
+
 <body class="bg-white text-black dark:bg-black dark:text-white">
   <div class="flex flex-col">
 
-      <header class="header">
+       <header class="header">
         <nav class="nav" id="menu">
           <a href="#films">Movies</a>
           <a href="#series">Series</a>
@@ -37,27 +39,6 @@
           <div class="menu-toggle" id="btnMenu">
             <i class="fi fi-rr-menu-burger"></i>
           </div>
-        <label class="switch ml-4">
-          <input type="checkbox" id="themeToggleBtn" aria-label="Toggle Theme"/>
-          <span class="slider">
-            <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow" width="16" height="16" aria-hidden="true">
-              <circle cx="12" cy="12" r="5" />
-              <g stroke="yellow" stroke-width="2">
-                <line x1="12" y1="1" x2="12" y2="4"/>
-                <line x1="12" y1="20" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
-                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="4" y2="12"/>
-                <line x1="20" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
-                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
-              </g>
-            </svg>
-            <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="16" height="16" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 17a7 7 0 009-4.21z"/>
-            </svg>
-          </span>
-        </label>
         </div>
       </header>
 
@@ -152,7 +133,6 @@
           <button class="page active">1</button>
           <button class="page">2</button>
         </div>
-
           <ul data-tab-id="terror" class="films_list">
           <li class="films_list_item"><img src="dist/images/a-hora-do-vampiro.jpg" alt="a-hora-do-vamp"></li>
           <li class="films_list_item"><img src="dist/images/a-substancia.jpg" alt="a-substancia"></li>
@@ -232,7 +212,133 @@
           </p>
         </section>
 
+      <section class="faq">
+        <div class="faq__container">
+          <h2 class="faq__title">
+            Perguntas Frequentes
+          </h2>
 
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              Quantos filmes estão disponíveis?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Atualmente, o CineBox possui mais de <strong>8.000 filmes</strong> e séries, incluindo os maiores sucessos de bilheteria e clássicos do cinema.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              O CineBox tem lançamentos simultâneos com o cinema?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Sim! Muitos filmes chegam no CineBox no mesmo dia de lançamento nos cinemas, especialmente produções originais e parcerias exclusivas.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              Posso baixar filmes para assistir offline?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Sim, é possível baixar qualquer filme ou série para assistir offline no seu dispositivo, sem precisar de internet.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              O CineBox tem suporte a 4K e Dolby Atmos?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Sim! Oferecemos conteúdo em <strong>4K Ultra HD, HDR e Dolby Atmos</strong> para garantir a melhor experiência cinematográfica na sua casa.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              Quantos dispositivos posso usar ao mesmo tempo?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Você pode assistir em até <strong>4 dispositivos simultaneamente</strong> usando a mesma conta.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              Existe um período grátis para testar o CineBox?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Sim! Oferecemos <strong>7 dias grátis</strong> para você testar todos os recursos da plataforma antes de contratar um plano.
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <div class="faq__item__question" data-faq-question>
+              Como cancelo minha assinatura?
+              <span>+</span>
+            </div>
+            <div class="faq__item__answer">
+              Você pode cancelar a qualquer momento diretamente nas configurações da sua conta. Sem burocracia, sem taxas adicionais.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="light-switch">
+          <span>Apagar/Acender luz:</span>
+          <label class="switch">
+            <input type="checkbox" id="themeToggleBtn" />
+            <span class="slider">
+              <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" />
+                <g stroke="#fbbf24" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="4" />
+                  <line x1="12" y1="20" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                  <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="4" y2="12" />
+                  <line x1="20" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                  <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                </g>
+              </svg>
+              <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 17a7 7 0 009-4.21z" />
+              </svg>
+            </span>
+          </label>
+        </div>
+
+        <img class="footer__logo" src="dist/images/logo2-png.png" alt="logo-video" />
+
+        <ul class="footer__links">
+          <li class="footer__links__item">
+            <div class="language-selector">
+              <select>
+                <option>English</option>
+                <option selected>Português</option>
+              </select>
+            </div>
+          </li>
+          <li class="footer__links__item"><a href="#">Termos e Condições de Uso</a></li>
+          <li class="footer__links__item"><a href="#">Política de Privacidade</a></li>
+          <li class="footer__links__item"><a href="#">Proteção de Dados no Brasil</a></li>
+          <li class="footer__links__item"><a href="#">Ajuda</a></li>
+        </ul>
+
+        <p>© 2025 FilmBox. Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </div>
 
   <script src="./dist/js/main.js" defer></script>

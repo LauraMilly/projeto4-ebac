@@ -1,0 +1,60 @@
+@use './variables' as *;
+
+.faq {
+  background-color: #18181f;
+  padding: 4rem 1rem;
+
+  &__container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__item {
+    background-color: #030303;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 1px solid $princi-color;
+
+    &__question {
+      color: $font-color;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__answer {
+      color: #ccc;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+      padding-top: 0; 
+
+      &.active {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 0.75rem;
+      }
+    }
+  }
+}
+
+body.light-theme {
+  .faq {
+    background-color:$button-text-color;
+
+     &__item  {
+        background-color: #18181f;
+    }
+
+  }
+}
