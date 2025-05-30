@@ -14,6 +14,14 @@ import sourcemaps from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
 
+// ✅ NOVO: Copiar o index.html para dist
+export function html() {
+  return gulp
+    .src('./src/index.html')
+    .pipe(gulp.dest('./dist'))
+    .on('end', () => console.log('HTML copiado!'));
+}
+
 export function scripts() {
   return gulp
     .src('./src/js/**/*.js') 
@@ -48,8 +56,6 @@ export function customStyles() {
     .on('end', () => console.log('Temas compilados!'));
 }
 
-
-
 export function images() {
   return gulp
     .src('./src/images/**/*.{jpg,jpeg,png,svg}')
@@ -63,7 +69,7 @@ export function images() {
               name: 'preset-default',
               params: {
                 overrides: {
-                  removeViewBox: false, 
+                  removeViewBox: false,
                 },
               },
             },
@@ -76,11 +82,11 @@ export function images() {
 }
 
 export const build = gulp.series(
-  gulp.parallel(tailwindStyles, customStyles, images, scripts)
+  gulp.parallel(html, tailwindStyles, customStyles, images, scripts)
 );
 
-
 export function watchFiles() {
+  gulp.watch('./src/index.html', html);
   gulp.watch('./src/styles/components/**/*.scss', customStyles);  
   gulp.watch('./src/styles/*.scss', customStyles);                
   gulp.watch('./src/styles/tailwind.scss', tailwindStyles);
@@ -88,5 +94,4 @@ export function watchFiles() {
   gulp.watch('./src/js/**/*.js', scripts);
 }
 
-
-export default gulp.parallel(tailwindStyles, customStyles, images, scripts, watchFiles);
+export default gulp.parallel(html, tailwindStyles, customStyles, images, scripts, watchFiles);
