@@ -75,6 +75,11 @@ export function images() {
     .on('end', () => console.log('Imagens processadas!'));
 }
 
+export const build = gulp.series(
+  gulp.parallel(tailwindStyles, customStyles, images, scripts)
+);
+
+
 export function watchFiles() {
   gulp.watch('./src/styles/components/**/*.scss', customStyles);  
   gulp.watch('./src/styles/*.scss', customStyles);                
