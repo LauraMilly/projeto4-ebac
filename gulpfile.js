@@ -14,13 +14,14 @@ import sourcemaps from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
 
-// ✅ NOVO: Copiar o index.html para dist
+
 export function html() {
   return gulp
-    .src('./src/index.html')
+    .src('./index.html') 
     .pipe(gulp.dest('./dist'))
     .on('end', () => console.log('HTML copiado!'));
 }
+
 
 export function scripts() {
   return gulp
